@@ -5,8 +5,8 @@ The repository consists of the following files:
 * README.md - text file describing the repo content, problem and solution
 * UCI HAR Dataset - folder containing the raw dataset
 * run_analysis.R - R script processing the multiple datasets into a clean data
-* clean_data.csv - Comma separated values of the clean data
-* summarized_data.csv - Comma separated values of the clean data summarized by average
+* clean_data.txt - text file containing the clean data
+* summarized_data.txt - text file containing the clean data summarized by average
 for each groups (subject and activity)
 
 ## Problem Summary
@@ -21,8 +21,8 @@ The run_analysis.R script will read and process the raw dataset by compiling the
 data, selecting only mean and standard deviation calculations and adding descriptive variable names.
 Finally it summarizes the data by the average of the variables for two groups: by subject and by activity.
 There are two outputs generated the the script:
-* a clean data .csv file named "clean_data.csv"
-* a summarized data .csv file of the clean data named "summarized_data.csv"
+* a clean data .txt file named "clean_data.txt"
+* a summarized data .txt file of the clean data named "summarized_data.txt"
 
 ## Raw data
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 

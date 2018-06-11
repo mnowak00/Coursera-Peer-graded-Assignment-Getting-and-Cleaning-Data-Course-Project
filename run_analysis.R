@@ -63,8 +63,8 @@ names(clean_data)[3:68] <- gsub("Acc","_Acceleration",names(clean_data)[3:68])
 names(clean_data)[3:68] <- gsub("Gyro","_Gyroscope",names(clean_data)[3:68])
 names(clean_data)[3:68] <- gsub("Mag","_Magnitude",names(clean_data)[3:68])
 
-## Writes the dataframe into a .csv file
-clean_data %>% write.csv("clean_data.csv")
+## Writes the dataframe into a .txt file
+clean_data %>% write.table("clean_data.txt")
 
 ## **********************************************************************************************
 ## Part 5. From the data set in step 4, creates a second, independent tidy data set with the 
@@ -74,8 +74,8 @@ clean_data %>% write.csv("clean_data.csv")
 ## Groups by subject and activities, then summarizes the dataframe by averages of variables
 summarized_data <- clean_data %>% group_by(subject,activity) %>% summarize_all(funs(mean))
 
-## Writes the dataframe into a .csv file
-summarized_data %>% write.csv("summarized_data.csv")
+## Writes the dataframe into a .txt file
+summarized_data %>% write.table("summarized_data.txt")
 
 
 
