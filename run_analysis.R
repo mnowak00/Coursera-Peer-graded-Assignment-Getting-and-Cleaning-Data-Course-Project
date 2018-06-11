@@ -64,7 +64,7 @@ names(clean_data)[3:68] <- gsub("Gyro","_Gyroscope",names(clean_data)[3:68])
 names(clean_data)[3:68] <- gsub("Mag","_Magnitude",names(clean_data)[3:68])
 
 ## Writes the dataframe into a .txt file
-clean_data %>% write.table("clean_data.txt")
+clean_data %>% write.table("clean_data.txt",row.name=FALSE)
 
 ## **********************************************************************************************
 ## Part 5. From the data set in step 4, creates a second, independent tidy data set with the 
@@ -75,7 +75,7 @@ clean_data %>% write.table("clean_data.txt")
 summarized_data <- clean_data %>% group_by(subject,activity) %>% summarize_all(funs(mean))
 
 ## Writes the dataframe into a .txt file
-summarized_data %>% write.table("summarized_data.txt")
+summarized_data %>% write.table("summarized_data.txt",row.name=FALSE)
 
 
 
